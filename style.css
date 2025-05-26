@@ -1,0 +1,414 @@
+:root {
+    --bg-light-primary: #FFFFFF;
+    --bg-light-secondary: #F8F9FA;
+    --bg-light-navbar: #FFFFFF;
+    --text-dark-primary: #212529;
+    --text-dark-secondary: #6C757D;
+    --text-dark-emphasis: #000000;
+
+    --accent-color: #00BFA6; /* Teal */
+    --accent-color-rgb: 0, 191, 166;
+    --accent-color-hover: #00A188;
+    --border-color-light: #DEE2E6;
+
+    --accent-whatsapp: #25D366;
+    --accent-email: #D93025;
+    --accent-github: #171515;
+
+    --font-family-headings: 'Montserrat', sans-serif;
+    --font-family-body: 'Poppins', sans-serif;
+
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    --card-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --navbar-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+body {
+    font-family: var(--font-family-body);
+    background-color: var(--bg-light-secondary);
+    color: var(--text-dark-primary);
+    padding-top: 70px; /* Ajustar este valor se a altura da navbar for diferente */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-headings);
+    color: var(--text-dark-emphasis);
+    font-weight: 700;
+}
+
+.section-title {
+    color: var(--text-dark-emphasis);
+}
+.section-text {
+    color: var(--text-dark-primary);
+    font-weight: 300;
+}
+.lead {
+    font-weight: 400;
+    color: var(--text-dark-secondary);
+    font-size: 1.15rem;
+}
+
+/* Navbar */
+#mainNavbar {
+    background-color: var(--bg-light-navbar);
+    box-shadow: var(--navbar-shadow);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.navbar-brand {
+    font-size: 1.6rem;
+    font-family: var(--font-family-headings);
+    font-weight: 700;
+    color: var(--accent-color) !important;
+}
+.nav-link {
+    font-family: var(--font-family-headings);
+    font-weight: 600;
+    color: var(--text-dark-secondary) !important;
+    transition: color 0.3s ease;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-color) !important;
+}
+.navbar-toggler {
+    border-color: rgba(0,0,0,0.1);
+}
+
+/* Navbar Scrolled */
+#mainNavbar.navbar-scrolled {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+
+
+/* Home Section */
+#home {
+    background-color: var(--bg-light-primary);
+}
+#home h1 {
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+.profile-placeholder .text-accent {
+    color: var(--accent-color) !important;
+}
+.profile-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 5px solid var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgba(var(--accent-color-rgb), 0.05);
+    box-shadow: var(--card-shadow);
+}
+
+/* Seções Alternadas */
+.section-bg-alt {
+    background-color: var(--bg-light-primary);
+}
+
+/* Linha divisória para títulos de seção */
+.title-hr {
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    opacity: 1;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Cards de Habilidade, Projeto, Contato */
+.skill-card, .project-card, .contact-card {
+    background-color: var(--bg-light-primary);
+    border-radius: 10px;
+    border: 1px solid var(--border-color-light);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    color: var(--text-dark-primary);
+    overflow: hidden;
+}
+.skill-card:hover, .project-card:hover, .contact-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--accent-color);
+}
+
+.card-title-text {
+    color: var(--text-dark-emphasis);
+    font-weight: 600;
+}
+.card-body-text {
+    color: var(--text-dark-secondary);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.skill-card .text-accent {
+    color: var(--accent-color) !important;
+}
+
+/* Cards de Projeto */
+.project-card .card-img-top {
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    transition: transform 0.4s ease-out;
+}
+.project-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+.project-card .card-body {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contato Section */
+.contact-link {
+    text-decoration: none;
+}
+.text-accent-whatsapp { color: var(--accent-whatsapp) !important; }
+.text-accent-email { color: var(--accent-email) !important; }
+.text-accent-github { color: var(--accent-github) !important; }
+
+
+/* Botões */
+.btn {
+    font-family: var(--font-family-headings);
+    font-weight: 600;
+    padding: 0.7rem 1.6rem;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    border-width: 2px;
+    border-style: solid;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #FFFFFF;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: transparent;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 12px rgba(var(--accent-color-rgb), 0.3);
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #FFFFFF;
+    box-shadow: 0 0 12px rgba(var(--accent-color-rgb), 0.3);
+}
+
+.btn-lg {
+    padding: 0.85rem 1.9rem;
+    font-size: 1rem;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--bg-light-secondary);
+    color: var(--text-dark-secondary);
+    font-size: 0.9rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid var(--border-color-light);
+}
+footer p {
+    margin-bottom: 0.25rem;
+}
+footer .text-accent {
+    color: var(--accent-color) !important;
+}
+footer .fa-heart {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+footer .fa-heart:hover {
+    transform: scale(1.2);
+}
+
+/* Scrollbar (Opcional, para navegadores Webkit) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--border-color-light);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color-hover);
+}
+
+/* =================================== */
+/*      Project Detail Page Styles     */
+/* =================================== */
+
+.project-detail-header {
+    background-color: var(--bg-light-secondary);
+    padding-top: calc(1.5rem + 70px); /* 70px é a altura da navbar, ajuste se necessário */
+    padding-bottom: 1.5rem;
+}
+
+.project-detail-header .section-title {
+    color: var(--accent-color);
+}
+
+.project-main-image-section img {
+    max-height: 70vh;
+    object-fit: cover;
+}
+
+.project-info-card {
+    background-color: var(--bg-light-secondary);
+    border: 1px solid var(--border-color-light);
+    top: calc(70px + 1.5rem); /* 70px é a altura da navbar, ajuste! */
+}
+
+.project-meta li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text-dark-secondary);
+}
+
+.project-meta li strong {
+    color: var(--text-dark-primary);
+}
+
+.tech-tags .badge {
+    font-family: var(--font-family-body);
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+    font-size: 0.85rem;
+}
+
+.bg-accent-light {
+    background-color: rgba(var(--accent-color-rgb), 0.15) !important;
+}
+.text-dark-emphasis {
+    color: var(--text-dark-emphasis) !important;
+}
+
+.project-gallery img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.btn-secondary { /* Botão para "Voltar aos Projetos" */
+    background-color: var(--text-dark-secondary);
+    border-color: var(--text-dark-secondary);
+    color: #fff;
+}
+.btn-secondary:hover {
+    background-color: var(--text-dark-primary);
+    border-color: var(--text-dark-primary);
+    color: #fff;
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 60px;
+    }
+    .navbar-nav {
+        margin-top: 10px;
+        background-color: var(--bg-light-primary);
+        border-radius: 8px;
+        padding: 10px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .nav-link {
+        padding: 12px 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #home {
+        text-align: center !important;
+        padding-top: 60px;
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    #home .lead {
+        font-size: 1rem;
+    }
+    #home .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    .profile-placeholder {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        width: 150px;
+        height: 150px;
+    }
+    .profile-placeholder i {
+        font-size: 5em !important;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .skill-card, .project-card, .contact-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .project-detail-header {
+        padding-top: calc(1rem + 60px); /* Ajuste para navbar menor */
+    }
+    .project-info-card {
+        top: calc(60px + 1rem); /* Ajuste para navbar menor */
+        position: static; /* Desativa o sticky em telas menores onde não faz sentido */
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #home h1 {
+        font-size: 2rem;
+    }
+    .lead {
+        font-size: 0.95rem;
+    }
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+    .btn-lg {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    .title-hr {
+        margin-bottom: 1.5rem;
+    }
+    .project-detail-header .display-4 {
+        font-size: 2.2rem; /* Reduzir título na página de projeto */
+    }
+}

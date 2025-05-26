@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Interativo - Phlavio Alves</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Phlavio Alves</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#habilidades">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#projetos">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Header -->
+    <header class="project-detail-header py-5" data-aos="fade-in">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold section-title">To-Do List Interativo</h1>
+            <p class="lead section-text col-md-8 mx-auto">Uma aplicação web simples e eficaz para gerenciamento de tarefas, construída com HTML, CSS e JavaScript puro, utilizando LocalStorage para persistência de dados.</p>
+        </div>
+    </header>
+
+    <!-- Project Main Image/Video -->
+    <section class="project-main-image-section" data-aos="zoom-in" data-aos-delay="100">
+        <div class="container-fluid p-0">
+            <img src="https://via.placeholder.com/1200x600.png/F8F9FA/00BFA6?text=To-Do+List+App+Interface" alt="Interface do To-Do List App" class="img-fluid w-100">
+        </div>
+    </section>
+
+    <!-- Project Content Section -->
+    <section id="project-content" class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Coluna Principal com Descrições e Galeria -->
+                <div class="col-lg-8" data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="fw-bold mb-3">Sobre o Projeto</h2>
+                    <p class="section-text mb-4">
+                        O objetivo deste projeto foi desenvolver uma aplicação de lista de tarefas (To-Do List) funcional e intuitiva, utilizando tecnologias front-end fundamentais. A aplicação permite aos usuários adicionar, marcar como concluída, editar e remover tarefas. Além disso, as tarefas são salvas no LocalStorage do navegador, garantindo que os dados persistam mesmo após o fechamento da página.
+                    </p>
+                    <h3 class="fw-bold mt-4 mb-3">Funcionalidades Implementadas</h3>
+                    <ul class="section-text">
+                        <li><strong>Adicionar Tarefas:</strong> Campo de entrada para adicionar novas tarefas à lista.</li>
+                        <li><strong>Marcar como Concluída:</strong> Checkbox para alternar o estado de uma tarefa entre pendente e concluída, com feedback visual.</li>
+                        <li><strong>Editar Tarefas:</strong> Capacidade de editar o texto de uma tarefa existente.</li>
+                        <li><strong>Remover Tarefas:</strong> Botão para excluir tarefas individualmente.</li>
+                        <li><strong>Filtrar Tarefas:</strong> Opções para visualizar todas as tarefas, apenas as ativas ou apenas as concluídas.</li>
+                        <li><strong>Persistência de Dados:</strong> Uso do LocalStorage para salvar e carregar as tarefas, mantendo o estado da aplicação entre sessões.</li>
+                        <li><strong>Design Responsivo:</strong> Interface adaptável a diferentes tamanhos de tela.</li>
+                    </ul>
+                     <h3 class="fw-bold mt-4 mb-3">Desafios e Aprendizados</h3>
+                    <p class="section-text mt-3">
+                        Um desafio interessante foi implementar a funcionalidade de edição "in-place" das tarefas e garantir que a atualização no LocalStorage fosse feita corretamente. Este projeto foi uma excelente oportunidade para aprofundar meus conhecimentos em manipulação do DOM com JavaScript puro, gerenciamento de estado simples e a utilização eficiente do LocalStorage. A lógica de filtragem e a atualização dinâmica da interface do usuário também foram aspectos importantes do desenvolvimento.
+                    </p>
+
+                    <!-- Galeria de Imagens (Opcional) -->
+                    <h3 class="fw-bold mt-5 mb-3">Galeria do Projeto</h3>
+                    <div class="row g-3 project-gallery mb-4">
+                        <div class="col-md-6" data-aos="zoom-in-up" data-aos-delay="50">
+                            <img src="https://via.placeholder.com/600x400.png/F8F9FA/00BFA6?text=Adicionando+Tarefa" class="img-fluid rounded shadow-sm" alt="Adicionando uma nova tarefa">
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-in-up" data-aos-delay="100">
+                            <img src="https://via.placeholder.com/600x400.png/F8F9FA/00BFA6?text=Tarefa+Concluída" class="img-fluid rounded shadow-sm" alt="Tarefa marcada como concluída">
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-in-up" data-aos-delay="150">
+                            <img src="https://via.placeholder.com/600x400.png/F8F9FA/00BFA6?text=Editando+Tarefa" class="img-fluid rounded shadow-sm" alt="Editando uma tarefa existente">
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-in-up" data-aos-delay="200">
+                            <img src="https://via.placeholder.com/600x400.png/F8F9FA/00BFA6?text=Filtro+Ativas" class="img-fluid rounded shadow-sm" alt="Filtrando tarefas ativas">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Lateral com Detalhes e Links -->
+                <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
+                    <div class="project-info-card p-4 rounded shadow-sm sticky-top">
+                        <h3 class="fw-bold mb-3 card-title-text">Detalhes do Projeto</h3>
+                        <ul class="list-unstyled project-meta">
+                            <li><strong><i class="fas fa-user me-2 text-accent"></i>Cliente:</strong> Projeto Pessoal</li>
+                            <li><strong><i class="fas fa-calendar-alt me-2 text-accent"></i>Data:</strong> Março 2024</li>
+                            <li><strong><i class="fas fa-briefcase me-2 text-accent"></i>Meu Papel:</strong> Desenvolvedor Front-end</li>
+                            <li><strong><i class="fas fa-tags me-2 text-accent"></i>Categoria:</strong> Aplicação Web, Utilitário</li>
+                        </ul>
+
+                        <h4 class="fw-bold mt-4 mb-3 card-title-text">Tecnologias Utilizadas</h4>
+                        <div class="tech-tags">
+                            <span class="badge bg-accent-light text-dark-emphasis me-1 mb-1">HTML5</span>
+                            <span class="badge bg-accent-light text-dark-emphasis me-1 mb-1">CSS3</span>
+                            <span class="badge bg-accent-light text-dark-emphasis me-1 mb-1">JavaScript (ES6+)</span>
+                            <span class="badge bg-accent-light text-dark-emphasis me-1 mb-1">LocalStorage</span>
+                            <span class="badge bg-accent-light text-dark-emphasis me-1 mb-1">Bootstrap 5 (para layout base)</span>
+                            <span class="badge bg-accent-light text-dark-emphasis me-1 mb-1">Font Awesome</span>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-top">
+                            <!-- Coloque o link real para o projeto se estiver online -->
+                            <a href="#" target="_blank" class="btn btn-primary w-100 mb-2"><i class="fas fa-external-link-alt me-2"></i>Ver Projeto Ao Vivo (Exemplo)</a>
+                            <a href="https://github.com/phlavioalves24/todo-list-js" target="_blank" class="btn btn-outline-primary w-100"><i class="fab fa-github me-2"></i>Ver no GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 pt-4 border-top" data-aos="fade-up">
+                <a href="index.html#projetos" class="btn btn-secondary"><i class="fas fa-arrow-left me-2"></i>Voltar aos Projetos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-0">© <span id="currentYear"></span> Phlavio Alves. Todos os direitos reservados.</p>
+            <p class="mb-0 small">Desenvolvido com <i class="fas fa-heart text-accent"></i> e Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
